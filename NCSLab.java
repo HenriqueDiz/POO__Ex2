@@ -4,15 +4,37 @@ public class NCSLab {
     private ArrayList<Computador> stock;
     
     public NCSLab() {
-        stock = new ArrayList<>(15);
+        stock = new ArrayList<>(15); //stock p 15 computadores
     }
 
     public void initializeStock() {
         int id = 1;
         for (int i = 0; i < 5; i++) {
-            stock.add(new Servidor(++id));
-            stock.add(new Laptop(++id));
-            stock.add(new RaspberrysPis(++id));
+            stock.add(new Servidor(id++));
+            stock.add(new Laptop(id++));
+            stock.add(new RaspberrysPis(id++));
         }
     }
+
+                //----- metodos -----//
+
+    public void imprimirTodosComputadores(){
+        for(Computador c : stock){
+            c.imprimirComputador();
+        }
+    }
+
+    public void imprimirX64() {
+        for(Computador c : stock){
+            if(c.arquitetura.equals("x64")){
+                c.imprimirComputador();
+            }
+        }
+    }
+
+    public void calcularConsumo(){
+        for(Computador c : stock){
+            System.out.println("ID " + c.id + "\nConsumo = " + c.calcularConsumo() + " W");
+        }
+    }           
 }

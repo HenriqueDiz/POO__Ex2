@@ -1,3 +1,5 @@
+//a nossa Superclass
+
 public class Computador {
     protected int id;
     protected int ram;
@@ -6,28 +8,25 @@ public class Computador {
     protected String arquitetura; // x64 - Servidores e Laptops, ARM - Raspberrys Pis
     protected String nivel;       // laptop = Edge, Raspberrys Pis = Iot, servidor = Cloud
     
-    public Computador(int id, int ram, int disco, double cpu, String arquitetura, String nivel) {
+    public Computador(int id, String arquitetura, String nivel) { //novo comp
         this.id = id;
-        this.ram = ram;
-        this.disco = disco;
-        this.cpu = cpu;
         this.arquitetura = arquitetura;
         this.nivel = nivel;
+
+        generateSpecs(); //specs diferents em cada computador
     }
 
-    public int getId() {return id;}
+    //met generico pa obter as specs
+    public void generateSpecs(){
+        System.out.println("Specs: ");
+    }
 
-    public int getRam() {return ram;}
-
-    public int getDisco() {return disco;}
-
-    public double getCpu() {return cpu;}
-
-    public String getArquitetura() {return arquitetura;}
-
-    public String getnivel() {return nivel;}
+    //met generico pos consumos energetico
+    public double calcularConsumo(){
+        return 50*cpu;
+    }
 
     public void imprimirComputador() {
-        System.out.println("ID: " + id + " RAM: " + ram + "GB DISK: " + disco + "GB CPU: " + cpu + "GHz NÍVEL: " + nivel);
+        System.out.println("ID= " + id + "\nRAM = " + ram + " GB\nDISK = " + disco + " GB\nCPU = " + cpu + " GHz\nARM/x64 = " + arquitetura + "\nNÍVEL = " + nivel + " \n\n");    
     }
 }
