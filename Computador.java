@@ -1,32 +1,26 @@
-//a nossa Superclass
+import java.util.Random;
 
 public class Computador {
-    protected int id;
-    protected int ram;
-    protected int disco;
-    protected double cpu;
-    protected String arquitetura; // x64 - Servidores e Laptops, ARM - Raspberrys Pis
-    protected String nivel;       // laptop = Edge, Raspberrys Pis = Iot, servidor = Cloud
+    protected int id, ram, disco;
+    protected double cpu;                       // laptop = Edge, Raspberrys Pis = Iot, servidor = Cloud
+    protected String arquitetura, nivel;        // x64 - Servidores e Laptops, ARM - Raspberrys Pis
     
-    public Computador(int id, String arquitetura, String nivel) { //novo comp
+    public Computador(int id, String arquitetura, String nivel) {
         this.id = id;
         this.arquitetura = arquitetura;
         this.nivel = nivel;
-
-        generateSpecs(); //specs diferents em cada computador
     }
 
-    //met generico pa obter as specs
-    public void generateSpecs(){
-        System.out.println("Specs: ");
-    }
-
-    //met generico pos consumos energetico
-    public double calcularConsumo(){
-        return 50*cpu;
+    public void generateSpecs(int limiteInferiorRam, int limiteSuperiorRam, int limiteInferiorDisco, int limiteSuperiorDisco, double limiteSuperiorCpu) {
+        this.ram = (int) Math.pow(2, new Random().nextInt(limiteInferiorRam) + limiteSuperiorRam); 
+        this.disco = (int) Math.pow(2, new Random().nextInt(limiteInferiorDisco) + limiteSuperiorDisco);
+        this.cpu = limiteSuperiorCpu + new Random().nextDouble();
     }
 
     public void imprimirComputador() {
-        System.out.println("ID= " + id + "\nRAM = " + ram + " GB\nDISK = " + disco + " GB\nCPU = " + cpu + " GHz\nARM/x64 = " + arquitetura + "\nNÍVEL = " + nivel + " \n\n");    
+        System.out.printf("ID = %d\nRAM = %d GB\nDISK = %d GB\nCPU = %.2f GHz\nARM/x64 = %s\nNÍVEL = %s\n\n", id, ram, disco, cpu, arquitetura, nivel);
     }
+
+    // Método abstrato
+    public double calcularConsumo() {return 0.0;}
 }

@@ -16,7 +16,7 @@ public class NCSLab {
         }
     }
 
-                //----- metodos -----//
+    //----- Métodos -----//
 
     public void imprimirTodosComputadores(){
         for(Computador c : stock){
@@ -34,7 +34,7 @@ public class NCSLab {
 
     public void calcularConsumo(){
         for(Computador c : stock){
-            System.out.println("ID " + c.id + "\nConsumo = " + c.calcularConsumo() + " W");
+            System.out.printf("ID %d - Consumo = %.2f W\n\n", c.id, c.calcularConsumo());
         }
     }           
 }

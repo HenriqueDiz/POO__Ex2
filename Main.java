@@ -3,19 +3,13 @@ public class Main{
         NCSLab lab = new NCSLab();
         lab.initializeStock();
 
-        System.out.println();
-        System.out.println(" ///// Database Computadores ///// ");
-        System.out.println();
+        System.out.println("\n///// Database Computadores /////\n");
         lab.imprimirTodosComputadores();
 
-        System.out.println();
-        System.out.println(" ///// Computadores x64 ///// ");
-        System.out.println();
+        System.out.println("\n///// Computadores x64 /////\n");
         lab.imprimirX64();
 
-        System.out.println();
-        System.out.println(" ///// Consumo Energético ///// ");
-        System.out.println();
+        System.out.println("\n///// Consumo Energético /////\n");
         lab.calcularConsumo();
     }
 }
