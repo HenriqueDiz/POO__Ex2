@@ -4,7 +4,7 @@ public class NCSLab {
     private ArrayList<Computador> stock;
     
     public NCSLab() {
-        stock = new ArrayList<>(15); //stock p 15 computadores
+        stock = new ArrayList<>(15);  // Stock inicial de 15 computadores
     }
 
     public void initializeStock() {
@@ -15,8 +15,6 @@ public class NCSLab {
             stock.add(new RaspberrysPis(id++));
         }
     }
-
-    //----- Métodos -----//
 
     public void imprimirTodosComputadores(){
         for(Computador c : stock){
