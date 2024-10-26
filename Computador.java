@@ -17,8 +17,9 @@ public class Computador {
         Random rand = new Random();
         this.ram = (int) Math.pow(2, rand.nextInt(limiteSuperiorRam - limiteInferiorRam + 1) + limiteInferiorRam);
         this.disco = (int) Math.pow(2, rand.nextInt(limiteSuperiorDisco - limiteInferiorDisco + 1) + limiteInferiorDisco);
-        this.cpu = limiteInferiorCpu + rand.nextDouble() * (limiteSuperiorCpu - limiteInferiorCpu);   //consideramos o intervalo todo entre inf e sup do cpu
-    }
+        this.cpu = rand.nextDouble() < 0.999 ? 
+            limiteInferiorCpu + rand.nextDouble() * (limiteSuperiorCpu - limiteInferiorCpu) : limiteSuperiorCpu;    
+        }
 
     // Método para imprimir as especificações do computador
     public void imprimirComputador() {
