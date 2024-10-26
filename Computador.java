@@ -13,11 +13,11 @@ public class Computador {
     }
 
     // Método para gerar especificações aleatórias conforme os limites passados
-    public void generateSpecs(int limiteInferiorRam, int limiteSuperiorRam, int limiteInferiorDisco, int limiteSuperiorDisco, double limiteInferiorCpu) {
+    public void generateSpecs(int limiteInferiorRam, int limiteSuperiorRam, int limiteInferiorDisco, int limiteSuperiorDisco, double limiteInferiorCpu, double limiteSuperiorCpu){
         Random rand = new Random();
         this.ram = (int) Math.pow(2, rand.nextInt(limiteSuperiorRam - limiteInferiorRam + 1) + limiteInferiorRam);
         this.disco = (int) Math.pow(2, rand.nextInt(limiteSuperiorDisco - limiteInferiorDisco + 1) + limiteInferiorDisco);
-        this.cpu = limiteInferiorCpu + rand.nextDouble();
+        this.cpu = limiteInferiorCpu + rand.nextDouble() * (limiteSuperiorCpu - limiteInferiorCpu);   //consideramos o intervalo todo entre inf e sup do cpu
     }
 
     // Método para imprimir as especificações do computador
