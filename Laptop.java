@@ -7,7 +7,7 @@ public class Laptop extends Computador{
 	public Laptop(int id){
 		super(id, "x64", "Edge");
 		this.temGPU = new Random().nextBoolean();   // Generate GPU boolean
-		generateSpecs(4, 6, 8, 10, 2.0, 3.0);
+		generateSpecs(4, 6, 8, 10, 2.0);
 	}
 
 	public double calcularConsumo(){
