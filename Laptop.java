@@ -1,16 +1,35 @@
 import java.util.Random;
 
-public class Laptop extends Computador{
+/**
+ * Classe laptop
+ * pode ou nao ter GPU
+ */
+public class Laptop extends Computador {
 
-	private boolean temGPU;
+    private boolean temGPU;
 
-	public Laptop(int id){
-		super(id, "x64", "Edge");
-		this.temGPU = new Random().nextBoolean();   // Generate GPU boolean
-		generateSpecs(4, 6, 8, 10, 2.0);
-	}
+    /**
+     * construtor da classe Laptop
+     *
+     * @param id id de cada laptop
+     */
+    public Laptop(int id) {
+        super(id, "x64", "Edge");
+        this.temGPU = new Random().nextBoolean(); // Generate GPU boolean
+        generateSpecs(4, 6, 8, 10, 2.0);
+    }
 
-	public double calcularConsumo(){
-		return temGPU ? (50 * this.cpu) : (40*this.cpu);
-	}
+    /**
+     * consumo de energia do laptop
+     * consumo varia com a presença de GPU
+     *
+     * @return consumo em watts
+     */
+    public double calcularConsumo() {
+        return temGPU ? (50 * this.cpu) : (40 * this.cpu);
+    }
+
+    public boolean isTemGPU() { return temGPU; }
+
+    public void setTemGPU(boolean temGPU) { this.temGPU = temGPU; }
 }
