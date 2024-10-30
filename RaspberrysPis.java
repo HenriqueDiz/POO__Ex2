@@ -1,11 +1,25 @@
-public class RaspberrysPis extends Computador{
+/**
+ * Classe Raspberry Pi
+ * arquitetura ARM e nivel Iot
+ */
+public class RaspberrysPis extends Computador {
 
-	public RaspberrysPis(int id){
-		super(id, "ARM", "Iot");
-		generateSpecs(1, 3, 4, 7, 1.0);
-	}
+    /**
+     * construtor da classe RaspberrysPis
+     *
+     * @param id id de cada Raspberry
+     */
+    public RaspberrysPis(int id) {
+        super(id, "ARM", "Iot");
+        generateSpecs(1, 3, 4, 7, 1.0);
+    }
 
-	public double calcularConsumo(){
-		return 10 * this.cpu;
-	}
+    /**
+     * consumo energia do Raspberry
+     *
+     * @return consumo em watts
+     */
+    public double calcularConsumo() {
+        return 10 * this.cpu;
+    }
 }
