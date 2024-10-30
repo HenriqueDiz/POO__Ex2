@@ -1,7 +1,12 @@
-public class Main{
-    public static void main(String[] args){
+/**
+ * Classe main que inicializa o lab de computadores
+ * print das specs de cada computador 
+ * calcula consumo energético
+ */
+public class Main {
+    public static void main(String[] args) {
         NCSLab lab = new NCSLab();  // Criação do laboratório
-        lab.initializeStock();      // Inicialização do estoque
+        lab.initializeStock();      // Inicialização do stock
 
         System.out.println("\n///// Database Computadores /////\n");
         lab.imprimirTodosComputadores(); // Imprime todos os computadores
