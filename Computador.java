@@ -1,6 +1,10 @@
 import java.util.Random;
 
 /**
+ * @author Henrique Diz
+ * @author Tomás Gonçalves
+ * @version 1.0
+ * 
  * Classe Computador 
  * com atributos para identificar RAM, arquitetura, nivel, disk e CPU
  */

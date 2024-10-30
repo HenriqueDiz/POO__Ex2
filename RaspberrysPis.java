@@ -1,4 +1,8 @@
 /**
+ * @author Henrique Diz
+ * @author Tomás Gonçalves
+ * @version 1.0
+ * 
  * Classe Raspberry Pi
  * arquitetura ARM e nivel Iot
  */
@@ -19,6 +23,7 @@ public class RaspberrysPis extends Computador {
      *
      * @return consumo em watts
      */
+    @Override
     public double calcularConsumo() {
         return 10 * this.cpu;
     }

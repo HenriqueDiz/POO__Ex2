@@ -1,4 +1,8 @@
 /**
+ * @author Henrique Diz
+ * @author Tomás Gonçalves
+ * @version 1.0
+ * 
  * Classe servidor
  * arquitetura x64 e nivel Cloud
  */
@@ -19,6 +23,7 @@ public class Servidor extends Computador {
      *
      * @return consumo em watts
      */
+    @Override
     public double calcularConsumo() {
         return 80 * this.cpu;
     }

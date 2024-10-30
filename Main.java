@@ -1,4 +1,8 @@
 /**
+ * @author Henrique Diz
+ * @author Tomás Gonçalves
+ * @version 1.0
+ * 
  * Classe main que inicializa o lab de computadores
  * print das specs de cada computador 
  * calcula consumo energético

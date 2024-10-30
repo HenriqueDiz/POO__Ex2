@@ -1,6 +1,10 @@
 import java.util.Random;
 
 /**
+ * @author Henrique Diz
+ * @author Tomás Gonçalves
+ * @version 1.0
+ * 
  * Classe laptop
  * pode ou nao ter GPU
  */
@@ -25,6 +29,7 @@ public class Laptop extends Computador {
      *
      * @return consumo em watts
      */
+    @Override
     public double calcularConsumo() {
         return temGPU ? (50 * this.cpu) : (40 * this.cpu);
     }
