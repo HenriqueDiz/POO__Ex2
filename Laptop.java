@@ -1,13 +1,15 @@
 import java.util.Random;
 
 /**
+ * Classe laptop - pode ou não ter GPU
+ * 
  * @author Henrique Diz
  * @author Tomás Gonçalves
  * @version 1.0
  * 
- * Classe laptop
- * pode ou nao ter GPU
  */
+
+
 public class Laptop extends Computador {
 
     private boolean temGPU;
