@@ -1,10 +1,10 @@
 /**
+ * Classe servidor com arquitetura x64 e nivel Cloud
+ * 
  * @author Henrique Diz
  * @author Tomás Gonçalves
  * @version 1.0
  * 
- * Classe servidor
- * arquitetura x64 e nivel Cloud
  */
 public class Servidor extends Computador {
 
