@@ -1,14 +1,16 @@
 import java.util.Random;
 
 /**
- * @author Henrique Diz
- * @author Tomás Gonçalves
- * @version 1.0
- *
  * Classe Computador com atributos para identificar RAM, arquitetura, nível, disco e CPU
  * Define métodos para gerar especificações aleatórias e calcular o consumo de energia
  * 
+ * @author Henrique Diz
+ * @author Tomás Gonçalves
+ * @version 1.0
+ * 
  */
+
+
 public class Computador {
     
     /**
