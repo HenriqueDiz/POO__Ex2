@@ -1,12 +1,24 @@
 /**
- * Classe main que inicializa o lab de computadores, print das specs de cada computador, e calcula consumo energético
+ * Classe Main inicializa o stock com os diferentes tipos de computadores,
+ * imprime as características dos computadores e calcula o consumo energético.
  * 
  * @author Henrique Diz
  * @author Tomás Gonçalves
  * @version 1.0
  * 
  */
+
 public class Main {
+    /**
+     * Construtor padrão da classe Main.
+     */
+    public Main() {}
+
+    /**
+     * Método principal para iniciar a aplicação
+     *
+     * @param args Argumentos da linha de comando (não utilizado) 
+     */
     public static void main(String[] args) {
         NCSLab lab = new NCSLab();  // Criação do laboratório
         lab.initializeStock();      // Inicialização do stock

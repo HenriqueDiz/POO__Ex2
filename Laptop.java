@@ -1,7 +1,7 @@
 import java.util.Random;
 
 /**
- * Classe laptop - pode ou não ter GPU
+ * Classe Laptop com arquitetura x64 e nível Edge
  * 
  * @author Henrique Diz
  * @author Tomás Gonçalves
@@ -9,34 +9,42 @@ import java.util.Random;
  * 
  */
 
-
 public class Laptop extends Computador {
 
     private boolean temGPU;
 
     /**
-     * construtor da classe Laptop
+     * Construtor da classe Laptop
      *
-     * @param id id de cada laptop
+     * @param id Id de cada laptop
      */
     public Laptop(int id) {
         super(id, "x64", "Edge");
-        this.temGPU = new Random().nextBoolean(); // Generate GPU boolean
+        this.temGPU = new Random().nextBoolean(); // Gera aleatoriamente a presença de GPU
         generateSpecs(4, 6, 8, 10, 2.0);
     }
 
     /**
-     * consumo de energia do laptop
-     * consumo varia com a presença de GPU
+     * Calcula o consumo de energia do laptop de acordo com a presença de GPU
      *
-     * @return consumo em watts
+     * @return Consumo em watts
      */
     @Override
     public double calcularConsumo() {
-        return temGPU ? (50 * this.cpu) : (40 * this.cpu);
+        return temGPU ? (60 * this.cpu) : (50 * this.cpu);
     }
 
+    /**
+     * Retorna se o laptop tem GPU
+     * 
+     * @return true se tem GPU, false caso contrário
+     */
     public boolean isTemGPU() { return temGPU; }
 
+    /**
+     * Define se o laptop tem GPU
+     * 
+     * @param temGPU true se tem GPU, false caso contrário
+     */
     public void setTemGPU(boolean temGPU) { this.temGPU = temGPU; }
 }

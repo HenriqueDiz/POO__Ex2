@@ -1,8 +1,8 @@
 import java.util.Random;
 
 /**
- * Classe Computador com atributos para identificar RAM, arquitetura, nível, disco e CPU
- * Define métodos para gerar especificações aleatórias e calcular o consumo de energia
+ * Classe Computador com os atributos RAM, arquitetura, nível, disco e CPU.
+ * Define métodos para gerar especificações aleatórias e calcular o consumo de energia.
  * 
  * @author Henrique Diz
  * @author Tomás Gonçalves
@@ -10,41 +10,40 @@ import java.util.Random;
  * 
  */
 
-
 public class Computador {
     
     /**
-     * identificador único do computador
+     * Identificador único do computador
      */
     protected int id;
     
     /**
-     * quantidade de memória RAM do computador em GB
+     * Quantidade de memória RAM do computador em GB
      */
     protected int ram;
     
     /**
-     * capacidade do disco do computador em GB
+     * Capacidade do disco do computador em GB
      */
     protected int disco;
     
     /**
-     * frequẽncia do processador do computador em GHz
+     * Frequência do processador do computador em GHz
      */
     protected double cpu; 
     
     /**
-     * arquitetura do computador (ex.: "x64" para servidores/laptops, "ARM" para Raspberry Pis)
+     * Arquitetura do computador ("x64" para servidores e laptops, "ARM" para Raspberry Pis)
      */
     protected String arquitetura;
     
     /**
-     * nivel do computador (ex.: "Edge" para laptops, "Iot" para Raspberry Pis, "Cloud" para servidores)
+     * Nível do computador ("Edge" para laptops, "Iot" para Raspberry Pis, "Cloud" para servidores)
      */
     protected String nivel;
 
     /**
-     * construtor Computador
+     * Construtor da classe Computador
      *
      * @param id           Identificador único do computador
      * @param arquitetura  Arquitetura do computador ("x64" ou "ARM")
@@ -57,7 +56,7 @@ public class Computador {
     }
 
     /**
-     * gerar specs aleatórias para o computador
+     * Gera as características de forma aleatória para o computador
      *
      * @param limiteInferiorRam   Limite inferior para a geração da RAM
      * @param limiteSuperiorRam   Limite superior para a geração da RAM
@@ -65,8 +64,7 @@ public class Computador {
      * @param limiteSuperiorDisco Limite superior para a geração do disco
      * @param limiteInferiorCpu   Limite inferior para a geração do CPU
      */
-    public void generateSpecs(int limiteInferiorRam, int limiteSuperiorRam, int limiteInferiorDisco,
-                              int limiteSuperiorDisco, double limiteInferiorCpu) {
+    public void generateSpecs(int limiteInferiorRam, int limiteSuperiorRam, int limiteInferiorDisco, int limiteSuperiorDisco, double limiteInferiorCpu) {
         Random rand = new Random();
         double cpuTemp = rand.nextDouble();
         this.ram = (int) Math.pow(2, rand.nextInt(limiteSuperiorRam - limiteInferiorRam + 1) + limiteInferiorRam);
@@ -75,93 +73,91 @@ public class Computador {
     }
 
     /**
-     * print das specs do computador
+     * Imprime as características do computador
      */
     public void imprimirComputador() {
-        System.out.printf("ID = %d\nRAM = %d GB\nDISK = %d GB\nCPU = %.2f GHz\nARM/x64 = %s\nNÍVEL = %s\n\n", id, ram, disco, cpu, arquitetura, nivel);
+        System.out.printf("ID = %d\nRAM = %d GB\nDISCO = %d GB\nCPU = %.2f GHz\nARQUITETURA = %s\nNÍVEL = %s\n\n", id, ram, disco, cpu, arquitetura, nivel);
     }
 
-    // Métodos getter e setter com descrições
-
     /**
-     * obter identificador do computador
+     * Retorna o identificador do computador
      * 
      * @return ID do computador
      */
     public int getId() { return id; }
 
     /**
-     * obter quantidade de memória RAM do computador
+     * Retorna a quantidade de memória RAM do computador
      * 
      * @return RAM do computador em GB
      */
     public int getRam() { return ram; }
 
     /**
-     * defenir quantidade de memória RAM do computador
+     * Define a quantidade de memória RAM do computador
      * 
      * @param ram Quantidade de RAM em GB
      */
     public void setRam(int ram) { this.ram = ram; }
 
     /**
-     * obter capacidade do disco do computador
+     * Retorna a capacidade do disco do computador
      * 
      * @return Disco do computador em GB
      */
     public int getDisco() { return disco; }
 
     /**
-     * defenir capacidade do disco do computador
+     * Define a capacidade do disco do computador
      * 
      * @param disco Capacidade do disco em GB
      */
     public void setDisco(int disco) { this.disco = disco; }
 
     /**
-     * obter frequência do CPU do computador
+     * Retorna a frequência do CPU do computador
      * 
      * @return Frequência do CPU em GHz
      */
     public double getCpu() { return cpu; }
 
     /**
-     * defenir frequência do CPU do computador
+     * Define a frequência do CPU do computador
      * 
      * @param cpu Frequência do CPU em GHz
      */
     public void setCpu(double cpu) { this.cpu = cpu; }
 
     /**
-     * obter arquitetura do computador
+     * Retorna a arquitetura do computador
      * 
-     * @return Arquitetura do computador (ex.: "x64", "ARM")
+     * @return Arquitetura do computador ("x64" ou "ARM")
      */
     public String getArquitetura() { return arquitetura; }
 
     /**
-     * defenir arquitetura do computador
+     * Define a arquitetura do computador
      * 
-     * @param arquitetura Arquitetura do computador (ex.: "x64", "ARM")
+     * @param arquitetura Arquitetura do computador ("x64" ou "ARM")
      */
     public void setArquitetura(String arquitetura) { this.arquitetura = arquitetura; }
 
     /**
-     * obter nível do computador
+     * Retorna o nível do computador
      * 
-     * @return Nível do computador (ex.: "Edge", "Iot", "Cloud")
+     * @return Nível do computador ("Edge", "Iot" ou "Cloud")
      */
     public String getNivel() { return nivel; }
 
     /**
-     * defenir nível do computador
+     * Define o nível do computador
      * 
-     * @param nivel Nível do computador (ex.: "Edge", "Iot", "Cloud")
+     * @param nivel Nível do computador ("Edge", "Iot" ou "Cloud")
      */
     public void setNivel(String nivel) { this.nivel = nivel; }
 
     /**
-     * calcular consumo de energia do computador
+     * Calcula o consumo de energia do computador
      *
      * @return Consumo energético em watts
      */

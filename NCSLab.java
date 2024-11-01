@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 /**
- * A classe NCSLab representa um laboratório com um stock de computadores.
+ * Classe NCSLab que representa um laboratório com um stock de computadores.
  * Esta classe permite inicializar o stock com diferentes tipos de computadores,
  * imprimir as características dos computadores e calcular o consumo energético.
  * 
@@ -10,6 +10,7 @@ import java.util.ArrayList;
  * @version 1.0
  * 
  */
+
 public class NCSLab {
     private ArrayList<Computador> stock;
 
@@ -21,7 +22,7 @@ public class NCSLab {
     }
 
     /**
-     * Método para inicializar o stock com 5 computadores de cada Tipo
+     * Inicializa o stock com 5 computadores de cada tipo
      */
     public void initializeStock() {
         int id = 1;
@@ -33,7 +34,7 @@ public class NCSLab {
     }
 
     /**
-     * Método para imprimir as características de todos os computadores no stock
+     * Imprime as características de todos os computadores no stock
      */
     public void imprimirTodosComputadores() {
         for (Computador c : stock) {
@@ -42,7 +43,7 @@ public class NCSLab {
     }
 
     /**
-     * Método para imprimir as características de todos os computadores com arquitetura x64
+     * Imprime as características de todos os computadores com arquitetura x64
      */
     public void imprimirX64() {
         for (Computador c : stock) {
@@ -53,7 +54,7 @@ public class NCSLab {
     }
 
     /**
-     * Método para calcular e imprimir consumo energético de todos os computadores no stock
+     * Calcula e imprime o consumo energético de todos os computadores no stock
      */
     public void calcularConsumo() {
         for (Computador c : stock) {

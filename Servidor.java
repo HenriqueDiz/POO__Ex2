@@ -1,17 +1,18 @@
 /**
- * Classe servidor com arquitetura x64 e nivel Cloud
+ * Classe Servidor com arquitetura x64 e nível Cloud
  * 
  * @author Henrique Diz
  * @author Tomás Gonçalves
  * @version 1.0
  * 
  */
+
 public class Servidor extends Computador {
 
     /**
-     * construtor da classe Servidor
+     * Construtor da classe Servidor
      *
-     * @param id id de cada servidor
+     * @param id Id de cada servidor
      */
     public Servidor(int id) {
         super(id, "x64", "Cloud");
@@ -19,9 +20,9 @@ public class Servidor extends Computador {
     }
 
     /**
-     * consumo energia do servidor
+     * Calcula o consumo de energia do servidor
      *
-     * @return consumo em watts
+     * @return Consumo em watts
      */
     @Override
     public double calcularConsumo() {
